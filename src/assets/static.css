@@ -37,8 +37,10 @@ footer {
   padding: 10px;
 }
 footer a {
-  color: white;
+  color: rgb(205, 205, 205);
+  text-decoration: none;
+  transition: all 100ms ease-in-out;
 }
 footer a:hover {
-  color: rgb(214, 213, 213);
+  color: rgb(181, 181, 181);
 }

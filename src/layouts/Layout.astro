@@ -10,12 +10,14 @@ import "../assets/static.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+	<script defer src="https://data.yuanhau.com/script.js" data-website-id="90922eb9-08f6-46cf-85ce-300532181026"></script>
     <title>吳元皓</title>
   </head>
   <body>
     <slot />
-    <footer>
-      Made with {Astro.generator}
-    </footer>
+	<footer>
+		<span>&copy; { new Date().getFullYear() } <a href="https://yuanhau.com">吳元皓</a></span>
+		<span>This page is <a href="https://github.com/hpware/bio-yhw">open source</a> and made with <i class="bi bi-heart-fill" style="color: red"></i></span>
+	</footer>
   </body>
 </html>
