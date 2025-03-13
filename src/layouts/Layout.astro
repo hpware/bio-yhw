@@ -1,6 +1,6 @@
 ---
 import "@fontsource/fira-mono/index.css";
-import "bootstrap-icons/font/bootstrap-icons.min.css"
+import "bootstrap-icons/font/bootstrap-icons.min.css";
 import "../assets/static.css";
 ---
 
@@ -10,14 +10,61 @@ import "../assets/static.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-	<script defer src="https://data.yuanhau.com/script.js" data-website-id="90922eb9-08f6-46cf-85ce-300532181026"></script>
     <title>吳元皓</title>
+	<!--Tracking Start -->
+	<script
+	defer
+	src="https://data.yuanhau.com/script.js"
+	data-website-id="90922eb9-08f6-46cf-85ce-300532181026"></script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NP7TG3R8");
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MS4ZBLG34N"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-MS4ZBLG34N");
+    </script>
+	<!--Tracking End -->
   </head>
   <body>
     <slot />
-	<footer>
-		<span>&copy; { new Date().getFullYear() } <a href="https://yuanhau.com">吳元皓</a></span>
-		<span>This page is <a href="https://github.com/hpware/bio-yhw">open source</a> and made with <i class="bi bi-heart-fill" style="color: red"></i></span>
-	</footer>
+    <footer>
+      <span
+        >&copy; {new Date().getFullYear()}
+        <a href="https://yuanhau.com">吳元皓</a></span
+      >
+      <span
+        >This page is <a href="https://github.com/hpware/bio-yhw">open source</a
+        > and made with <i class="bi bi-heart-fill" style="color: red"
+        ></i></span
+      >
+    </footer>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NP7TG3R8"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
   </body>
 </html>

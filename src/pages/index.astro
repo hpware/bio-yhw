@@ -4,41 +4,38 @@ import Lb from "../components/links.astro";
 ---
 
 <Layout>
-	<div>
-  <header>
-    <img 
-	src="/pfp-1.jpg" 
-	loading="lazy" 
-	/>
-    <h1>吳元皓</h1>
-  </header>
-  <!--Use HTML Color codes. -->
-  <main>
-    <Lb
-      icon="youtube"
-      name="Youtube"
-      link="https://youtube.com/@hwtw"
-      color="red"
-      hover="#fff"
-      border="#fff"
-    />
-    <Lb
-	  black
-      icon="twitter"
-      name="Twitter"
-      link="https://x.com/ictechz"
-      color="black"
-      hover="#494949"
-      border="#fff"
-    />
-  </main>
-</div>
+  <div>
+    <header>
+      <img src="/pfp-1.jpg" loading="lazy" />
+      <h1>吳元皓</h1>
+    </header>
+    <!--Use HTML Color codes. -->
+    <main>
+      <Lb
+        icon="youtube"
+        name="Youtube"
+        link="https://youtube.com/@hwtw"
+        color="red"
+        hover="#fff"
+        border="#fff"
+      />
+      <Lb
+        black
+        icon="twitter"
+        name="Twitter"
+        link="https://x.com/ictechz"
+        color="black"
+        hover="#494949"
+        border="#fff"
+      />
+    </main>
+  </div>
 </Layout>
 
 <style>
-div {
-	width: 100%;
-}
+  div {
+    width: 100%;
+  }
   main {
     display: flex;
     flex-direction: column;
@@ -48,13 +45,13 @@ div {
     width: 200px;
     border-radius: 100px;
   }
-@media only screen and (min-width: 500px) {
-	div {
-		width: 500px;
-		justify-content:center;
-		align-items:center;
-		text-align:center;
-		align-self:center;
-	}
-}
+  @media only screen and (min-width: 500px) {
+    div {
+      width: 500px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      align-self: center;
+    }
+  }
 </style>
