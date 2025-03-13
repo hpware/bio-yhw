@@ -1,0 +1,42 @@
+---
+
+interface Props {
+  icon: string;
+  name: string;
+  link: string;
+  color: string;
+  black?: boolean
+  hover: string;
+  border: string;
+}
+const p = Astro.props as Props;
+// For styles
+const buttoncolor = p.color;
+const bordercolor = p.border;
+const hovercolor = p.hover;
+let textcolor = "black";
+if (p.black) {
+    textcolor = "white";
+}
+---
+
+<a href={p.link}>
+  <button>
+    <i class={`bi bi-${p.icon}`}></i>
+    <span>{p.name}</span>
+  </button>
+</a>
+
+<style define:vars={{ buttoncolor, bordercolor, hovercolor, textcolor}}>
+  a {
+    text-decoration: none;
+  }
+  button {
+    background-color: var(--buttoncolor);
+    color: var(--textcolor);
+  }
+  button:hover {
+    background-color: var(--hovercolor);
+    border-color: var(--bordercolor);
+  }
+</style>
