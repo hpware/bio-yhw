@@ -3,55 +3,252 @@ import Layout from "../layouts/Layout.astro";
 import Lb from "../components/links.astro";
 ---
 
-<Layout>
-  <div>
+<Layout title="吳元皓 - Personal Bio">
+  <div class="container">
     <header>
-      <img src="/pfp-1.jpg" loading="lazy" />
+      <div class="profile-image">
+        <img src="/pfp-1.jpg" alt="吳元皓 Profile Photo" loading="lazy" />
+      </div>
       <h1>吳元皓</h1>
+      <p class="tagline">Developer • Creator • Innovator</p>
+      
+      <div class="bio-text">
+        <p>Hi there! I'm a passionate developer and content creator focused on technology and innovation. 
+           I love building solutions that make a difference and sharing knowledge with the community.</p>
+      </div>
     </header>
-    <!--Use HTML Color codes. -->
-    <main>
-      <Lb
-        icon="youtube"
-        name="Youtube"
-        link="https://youtube.com/@hwtw"
-        color="red"
-        hover="#fff"
-        border="#fff"
-      />
-      <Lb
-        black
-        icon="twitter"
-        name="Twitter"
-        link="https://x.com/ictechz"
-        color="black"
-        hover="#494949"
-        border="#fff"
-      />
-    </main>
+
+    <section class="connect-section">
+      <h2>Connect With Me</h2>
+      <main>
+        <Lb
+          icon="youtube"
+          name="Youtube"
+          link="https://youtube.com/@hwtw"
+          color="#FF0000"
+          hover="#CC0000"
+          border="#fff"
+        />
+        <Lb
+          black
+          icon="twitter"
+          name="Twitter"
+          link="https://x.com/ictechz"
+          color="black"
+          hover="#494949"
+          border="#fff"
+        />
+        <Lb
+          icon="web"
+          name="yuanhau.com"
+          link="https://yuanhau.com"
+          color="#0078D7"
+          hover="#0053A6"
+          border="#fff"
+        />
+        <Lb
+          icon="github"
+          name="GitHub"
+          link="https://github.com/yourusername"
+          color="#24292e"
+          hover="#1D2125"
+          border="#fff"
+        />
+      </main>
+    </section>
+    
+    <section class="projects-section">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Project Name</h3>
+          <p>Short description of the project and what technologies were used.</p>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+        <div class="project-card">
+          <h3>Another Project</h3>
+          <p>Brief explanation about this impressive work you've done.</p>
+          <a href="#" class="project-link">View Project →</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2023 吳元皓 • All Rights Reserved</p>
+    </footer>
   </div>
 </Layout>
 
 <style>
-  div {
+  .container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    animation: fadeIn 0.8s ease-in;
   }
+
+  header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .profile-image {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  .profile-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .profile-image:hover::after {
+    opacity: 1;
+  }
+
+  header > .profile-image > img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  header > .profile-image > img:hover {
+    transform: scale(1.05);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+    background: linear-gradient(90deg, #0078D7, #00B2A9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0.5rem 0 1.5rem;
+    font-weight: 500;
+  }
+
+  .bio-text {
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  section {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+
+  h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #0078D7, #00B2A9);
+  }
+
   main {
     display: flex;
     flex-direction: column;
     gap: 1em;
+    width: 100%;
+    align-items: center;
   }
-  header > img {
-    width: 200px;
-    border-radius: 100px;
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
+
+  .project-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  }
+
+  .project-card h3 {
+    margin-top: 0;
+    color: #0078D7;
+  }
+
+  .project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #0078D7;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .project-link:hover {
+    color: #00B2A9;
+  }
+
+  footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
   @media only screen and (min-width: 500px) {
-    div {
-      width: 500px;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      align-self: center;
+    .container {
+      padding: 3rem 2rem;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr 1fr;
     }
   }
 </style>
