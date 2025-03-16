@@ -22,6 +22,7 @@ button {
   background-color: #6bd3af;
   cursor: pointer;
   transition: all 300ms ease-in-out;
+  gap: 2px;
 }
 
 button:hover {
@@ -35,6 +36,7 @@ footer {
   flex-direction: column;
   color: white;
   padding: 10px;
+  padding-top: 50px;
 }
 footer a {
   color: rgb(205, 205, 205);
